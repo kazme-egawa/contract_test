@@ -1,6 +1,6 @@
 import { ethers } from "ethers"
 
-export const deployContractService = async () => {
+export const deployContractWithoutWaitService = async () => {
   // 1. Import the contract file
   const compiled = require('./../compile');
 
@@ -18,13 +18,9 @@ export const deployContractService = async () => {
 
   // 5. Create contract factory instance with signer
   const incrementer = new ethers.ContractFactory(abi, bytecode, signer);
-  console.log(`Attempting to deploy from account: ${signer.address}`);
 
   // 6. Deploy
   const contract = await incrementer.deploy([5]);
-
-  // 7. Send tx and wait for receipt
-  await contract.deployed();
 
   console.log(`Contract deployed at address: ${contract.address}`);
 
