@@ -9,24 +9,24 @@ function App() {
   const [address1State, setAddress1State] = React.useState('');
   const [address2State, setAddress2State] = React.useState('');
 
-  const deploy1Delay = async (t:number) => {
-    return new Promise<void>((resolve) => {
-      // adding delay of 4s
-      setTimeout(() => {
-        setAddress1State('hoge');
-        resolve();
-      }, t);
-    });
-  }
-  const deploy2Delay = async (t:number) => {
-    return new Promise<void>((resolve) => {
-      // adding delay of 4s
-      setTimeout(() => {
-        setAddress2State('piyo');
-        resolve();
-      }, t);
-    });
-  }
+  // const deploy1Delay = async (t:number) => {
+  //   return new Promise<void>((resolve) => {
+  //     // adding delay of 4s
+  //     setTimeout(() => {
+  //       setAddress1State('hoge');
+  //       resolve();
+  //     }, t);
+  //   });
+  // }
+  // const deploy2Delay = async (t:number) => {
+  //   return new Promise<void>((resolve) => {
+  //     // adding delay of 4s
+  //     setTimeout(() => {
+  //       setAddress2State('piyo');
+  //       resolve();
+  //     }, t);
+  //   });
+  // }
   const handleClick1 = async () => {
     setButton1State("deploying");
     const contractAddress = await deployContractService();

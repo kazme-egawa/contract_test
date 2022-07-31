@@ -1,3 +1,8 @@
+# Setup
+
+Replace RPC_URL in src/app.config to your rinkeby rpc url.If you don't have any, create a free account of Infura and get it there.
+Get rinkeby ETH from the faucet.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
