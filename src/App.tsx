@@ -29,13 +29,15 @@ function App() {
   }
   const handleClick1 = async () => {
     setButton1State("deploying");
-    await deployContractService();
+    const contractAddress = await deployContractService();
+    setAddress1State(contractAddress);
     // await deploy1Delay(4000);
     setButton1State("deployed");
   }
   const handleClick2 = async () => {
     setButton2State("deploying");
-    await deployContractWithoutWaitService();
+    const contractAddress = await deployContractWithoutWaitService();
+    setAddress2State(contractAddress);
     // await deploy2Delay(1000);
     setButton2State("deployed");
   }
